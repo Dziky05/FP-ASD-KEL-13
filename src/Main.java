@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 public class Main {
     private static List<City> cities = new ArrayList<>();
-    private static TreeNode rootTree = new TreeNode("Indonesia");
 
     public static void main(String[] args) {
         initSampleData();
@@ -28,27 +27,11 @@ public class Main {
         System.out.printf("Kamu memilih: %s\n", chosen.getName());
         showPlaces(chosen.getPlaces());
 
-        System.out.println("\nMasukkan pilihan destinasi (boleh lebih dari 1 pisah spasi).");
-        System.out.println("Atau ketik 11 untuk urutkan dulu dari yang terdekat.");
-        System.out.println("Atau ketik 12 untuk urutkan dulu dari yang termurah.");
+        System.out.println("\nMasukkan pilihan destinasi");
         System.out.print("Pilihan: ");
         String line = sc.nextLine().trim();
 
         List<Place> displayList = new ArrayList<>(chosen.getPlaces()); // baseline
-
-        if (line.equals("11")) {
-            Sorter.quickSortByDistance(displayList);
-            System.out.println("Daftar destinasi diurutkan berdasarkan jarak (terdekat -> terjauh):");
-            showPlaces(displayList);
-            System.out.print("Sekarang pilih destinasi (contoh: 1 3 5): ");
-            line = sc.nextLine().trim();
-        } else if (line.equals("12")) {
-            displayList = Sorter.mergeSortByPrice(displayList);
-            System.out.println("Daftar destinasi diurutkan berdasarkan harga (termurah -> termahal):");
-            showPlaces(displayList);
-            System.out.print("Sekarang pilih destinasi (contoh: 1 3 5): ");
-            line = sc.nextLine().trim();
-        }
 
         // parse selections (ids separated by spaces)
         String[] tokens = line.split("\\s+");
@@ -65,10 +48,6 @@ public class Main {
             }
         }
 
-        if (chosenPlaces.isEmpty()) {
-            System.out.println("Tidak ada destinasi yang valid dipilih. Program selesai.");
-            return;
-        }
 
         // Output: urutkan pilihan sesuai jarak dari hotel (terdekat dulu)
         chosenPlaces.sort(Comparator.comparingDouble(Place::getDistanceFromHotel));
@@ -77,8 +56,6 @@ public class Main {
             System.out.println(p);
         }
 
-        // Optional: show suggestion of path via Dijkstra between first and next (not optimized for full TSP)
-        System.out.println("\nCatatan: jika ingin rute terpendek antar-destinasi (graph/Dijkstra), fitur dapat diaktifkan di pengembangan berikutnya.");
     }
 
     private static void showPlaces(List<Place> places) {
@@ -101,8 +78,6 @@ public class Main {
         surabaya.addPlace(new Place(9,"Pantai Kenjeran", 12.0, 0));
         surabaya.addPlace(new Place(10,"Graha Famili", 6.5, 25000));
         cities.add(surabaya);
-        TreeNode city1 = new TreeNode("Surabaya");
-        rootTree.addChild(city1);
 
         // Jakarta
         City jakarta = new City("Jakarta");
@@ -117,8 +92,6 @@ public class Main {
         jakarta.addPlace(new Place(9,"Setu Babakan", 22.0, 10000));
         jakarta.addPlace(new Place(10,"Plaza Indonesia (mall)", 4.2, 0));
         cities.add(jakarta);
-        TreeNode city2 = new TreeNode("Jakarta");
-        rootTree.addChild(city2);
 
         // Bandung
         City bandung = new City("Bandung");
@@ -133,12 +106,5 @@ public class Main {
         bandung.addPlace(new Place(9,"Saung Angklung Udjo", 18.0, 25000));
         bandung.addPlace(new Place(10,"Observatorium Bosscha", 35.0, 15000));
         cities.add(bandung);
-        TreeNode city3 = new TreeNode("Bandung");
-        rootTree.addChild(city3);
-
-        // populate tree leaves with place names (simple)
-        for (Place p : surabaya.getPlaces()) city1.addChild(new TreeNode(p.getName()));
-        for (Place p : jakarta.getPlaces()) city2.addChild(new TreeNode(p.getName()));
-        for (Place p : bandung.getPlaces()) city3.addChild(new TreeNode(p.getName()));
     }
 }
