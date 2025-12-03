@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class Graph {
     private double[][] adjMatrix;
@@ -10,7 +9,6 @@ public class Graph {
         this.n = adjMatrix.length;
     }
 
-    // Dijkstra from source index
     public DijkstraResult dijkstra(int src) {
         double[] dist = new double[n];
         int[] prev = new int[n];

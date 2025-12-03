@@ -1,7 +1,6 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
     private static List<City> cities = new ArrayList<>();
@@ -48,14 +47,11 @@ public class Main {
             }
         }
 
-
-        // Output: urutkan pilihan sesuai jarak dari hotel (terdekat dulu)
         chosenPlaces.sort(Comparator.comparingDouble(Place::getDistanceFromHotel));
         System.out.println("\nUrutan destinasi yang sudah dipilih (diurutkan berdasarkan jarak dari hotel):");
         for (Place p : chosenPlaces) {
             System.out.println(p);
         }
-
     }
 
     private static void showPlaces(List<Place> places) {
