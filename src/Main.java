@@ -24,15 +24,32 @@ public class Main {
 
         City chosen = cities.get(kotaIdx);
         System.out.printf("Kamu memilih: %s\n", chosen.getName());
+        System.out.println("Destinasi yang tersedia :");
         showPlaces(chosen.getPlaces());
 
         System.out.println("\nMasukkan pilihan destinasi");
+        System.out.println("atau");
+        System.out.println("Ketik 11 untuk mengurutkan dari tempat terdekat");
+        System.out.println("Ketik 12 untuk mengurutkan dari tempat termurah");
         System.out.print("Pilihan: ");
         String line = sc.nextLine().trim();
 
-        List<Place> displayList = new ArrayList<>(chosen.getPlaces()); // baseline
+        List<Place> displayList = new ArrayList<>(chosen.getPlaces());
 
-        // parse selections (ids separated by spaces)
+        if (line.equals("11")) {
+            Sorter.quickSortByDistance(displayList);
+            System.out.println("Daftar destinasi diurutkan berdasarkan jarak (terdekat -> terjauh):");
+            showPlaces(displayList);
+            System.out.print("Silahkan pilih destinasi: ");
+            line = sc.nextLine().trim();
+        } else if (line.equals("12")) {
+            displayList = Sorter.mergeSortByPrice(displayList);
+            System.out.println("Daftar destinasi diurutkan berdasarkan harga (termurah -> termahal):");
+            showPlaces(displayList);
+            System.out.print("Silahkan pilih destinasi: ");
+            line = sc.nextLine().trim();
+        }
+
         String[] tokens = line.split("\\s+");
         List<Place> chosenPlaces = new ArrayList<>();
         for (String t : tokens) {
@@ -61,7 +78,7 @@ public class Main {
     }
 
     private static void initSampleData() {
-        // Surabaya
+        //Surabaya
         City surabaya = new City("Surabaya");
         surabaya.addPlace(new Place(1,"Tugu Pahlawan", 2.0, 0));
         surabaya.addPlace(new Place(2,"House of Sampoerna", 3.5, 10000));
@@ -75,7 +92,7 @@ public class Main {
         surabaya.addPlace(new Place(10,"Graha Famili", 6.5, 25000));
         cities.add(surabaya);
 
-        // Jakarta
+        //Jakarta
         City jakarta = new City("Jakarta");
         jakarta.addPlace(new Place(1,"Monas", 4.0, 15000));
         jakarta.addPlace(new Place(2,"Kota Tua", 10.0, 0));
@@ -89,7 +106,7 @@ public class Main {
         jakarta.addPlace(new Place(10,"Plaza Indonesia (mall)", 4.2, 0));
         cities.add(jakarta);
 
-        // Bandung
+        //Bandung
         City bandung = new City("Bandung");
         bandung.addPlace(new Place(1,"Gedung Sate", 6.0, 0));
         bandung.addPlace(new Place(2,"Braga", 5.0, 0));
