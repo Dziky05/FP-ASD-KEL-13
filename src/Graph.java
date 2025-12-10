@@ -3,7 +3,7 @@ import java.util.*;
 public class Graph {
     private double[][] adjMatrix;
     private int n;
-
+    
     public Graph(double[][] adjMatrix) {
         this.adjMatrix = adjMatrix;
         this.n = adjMatrix.length;
