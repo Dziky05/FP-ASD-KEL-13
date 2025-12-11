@@ -12,7 +12,7 @@ public class Main {
         System.out.println("==============================================");
 
         // --- 1. PILIH KOTA ---
-        System.out.println("\n[Langkah 1] Pilih Kota Anda:");
+        System.out.println("\n[Langkah 1] Pilih Lokasi Anda:");
         System.out.println("1. Surabaya");
         System.out.println("2. Jakarta");
         System.out.println("3. Bandung");
@@ -44,7 +44,9 @@ public class Main {
         while(startPlace == null) {
             System.out.print("Posisi Saya (ID): ");
             try {
-                startId = Integer.parseInt(sc.nextLine().trim());
+                String input = sc.nextLine().trim();
+                if (input.isEmpty()) continue;
+                startId = Integer.parseInt(input);
                 startPlace = chosen.getPlaceById(startId);
                 if(startPlace == null) System.out.println("ID tidak ditemukan. Cek daftar diatas.");
             } catch (NumberFormatException e) {
@@ -53,8 +55,7 @@ public class Main {
         }
         System.out.println(">> Posisi Awal: " + startPlace.getName());
 
-        // --- 3. PILIH KEBUTUHAN (LOOPING MENU) ---
-        // Kita gunakan loop agar user bisa bolak-balik cek harga/jarak
+        // --- 3. MENU UTAMA (LOOPING TERUS MENERUS) ---
         while (true) {
             System.out.println("\n[Langkah 3] Menu Utama - Apa yang ingin Anda lakukan?");
             System.out.println("1. Buat Rute Perjalanan (Lanjut ke Navigasi)");
@@ -67,9 +68,103 @@ public class Main {
             List<Place> displayList = new ArrayList<>();
 
             if (menuChoice.equals("1")) {
-                // User ingin membuat rute -> KELUAR DARI LOOP (break)
-                System.out.println("\n>> Melanjutkan ke mode navigasi...");
-                break;
+                // ============================================================
+                // LOGIKA NOMOR 1 (NAVIGASI) PINDAH KE SINI (DALAM LOOP)
+                // ============================================================
+                System.out.println("\n--- Mode Navigasi Aktif ---");
+                System.out.println("Daftar Tempat Tersedia:");
+                showPlaces(chosen.getPlaces());
+
+                System.out.println("\n[Langkah 4] Pilih tempat yang ingin dikunjungi");
+                System.out.println("Masukkan ID destinasi (pisahkan spasi, cth: 2 4 5)");
+
+                List<Place> destinations = new ArrayList<>();
+
+                // Loop kecil untuk memastikan user input destinasi valid sebelum lanjut
+                while(destinations.isEmpty()) {
+                    System.out.print("Tujuan: ");
+                    String line = sc.nextLine().trim();
+                    if(line.isEmpty()) {
+                        System.out.println("Input kosong. Silakan masukkan ID.");
+                        continue;
+                    }
+
+                    String[] tokens = line.split("\\s+");
+                    for (String t : tokens) {
+                        if (t.isBlank()) continue;
+                        try {
+                            int id = Integer.parseInt(t);
+                            if (id == startId) continue;
+                            Place p = chosen.getPlaceById(id);
+                            if (p != null && !destinations.contains(p)) destinations.add(p);
+                        } catch (NumberFormatException ignored) {}
+                    }
+
+                    if(destinations.isEmpty()) {
+                        System.out.println("Tidak ada ID valid yang dimasukkan. Coba lagi.");
+                    }
+                }
+
+                // --- PROSES ROUTING (Dijkstra) ---
+                System.out.println("\n[Langkah 5] Rute Perjalanan Terbaik (Dijkstra Analysis)");
+                System.out.println("-------------------------------------------------------");
+
+                double[][] matrix = chosen.getDistancesBetweenPlaces();
+                Graph graph = new Graph(matrix);
+                List<Place> route = new ArrayList<>();
+                double totalDistance = 0;
+                Place currentPlace = startPlace;
+
+                // Copy destinations agar list asli tidak hilang jika loop diulang
+                List<Place> remainingDestinations = new ArrayList<>(destinations);
+
+                while (!remainingDestinations.isEmpty()) {
+                    Place nearest = null;
+                    double minDist = Double.MAX_VALUE;
+                    int currentIndex = chosen.getPlaces().indexOf(currentPlace);
+
+                    Graph.DijkstraResult result = graph.dijkstra(currentIndex);
+
+                    for (Place candidate : remainingDestinations) {
+                        int candidateIndex = chosen.getPlaces().indexOf(candidate);
+                        double dist = result.dist[candidateIndex];
+
+                        if (dist < minDist) {
+                            minDist = dist;
+                            nearest = candidate;
+                        }
+                    }
+
+                    if (nearest != null) {
+                        int nearestIndex = chosen.getPlaces().indexOf(nearest);
+                        String pathStr = result.reconstructPath(nearestIndex);
+
+                        route.add(nearest);
+                        totalDistance += minDist;
+                        remainingDestinations.remove(nearest);
+
+                        System.out.printf(" -> Menuju %-25s (Jarak: %.1f km | Via Node: %s)\n",
+                                nearest.getName(), minDist, pathStr);
+
+                        currentPlace = nearest;
+                    }
+                }
+
+                // --- REKAP RUTE ---
+                System.out.println("\n=================================");
+                System.out.println("       REKAP PERJALANAN");
+                System.out.println("=================================");
+                System.out.println("START : " + startPlace.getName());
+                for (Place p : route) {
+                    System.out.println("  ↓   ");
+                    System.out.println("TIBA  : " + p.getName());
+                }
+                System.out.println("---------------------------------");
+                System.out.printf("Total Jarak Tempuh: %.1f km\n", totalDistance);
+
+                // --- PAUSE AGAR TIDAK LANGSUNG CLS/EXIT ---
+                System.out.println("\n[Tekan ENTER untuk kembali ke menu...]");
+                sc.nextLine();
 
             } else if (menuChoice.equals("2")) {
                 // Quick Sort (Terdekat)
@@ -87,7 +182,7 @@ public class Main {
                 showPlaces(displayList);
 
                 System.out.println("\n[Tekan ENTER untuk kembali ke menu...]");
-                sc.nextLine(); // Pause, tunggu user tekan enter
+                sc.nextLine();
 
             } else if (menuChoice.equals("3")) {
                 // Merge Sort (Termurah)
@@ -97,99 +192,15 @@ public class Main {
                 showPlaces(displayList);
 
                 System.out.println("\n[Tekan ENTER untuk kembali ke menu...]");
-                sc.nextLine(); // Pause, tunggu user tekan enter
+                sc.nextLine();
 
             } else if (menuChoice.equals("4")) {
                 System.out.println("Terima kasih telah menggunakan aplikasi.");
-                return; // Matikan program
+                return; // Keluar Program
             } else {
                 System.out.println("Pilihan tidak valid.");
             }
         }
-
-        // --- 4. PILIH DESTINASI TUJUAN ---
-        // Code akan sampai sini HANYA JIKA user memilih opsi "1" di menu atas
-
-        System.out.println("\n--- Mode Navigasi Aktif ---");
-        System.out.println("Daftar Tempat Tersedia:");
-        // Tampilkan default list lagi untuk referensi ID
-        showPlaces(chosen.getPlaces());
-
-        System.out.println("\n[Langkah 4] Pilih tempat yang ingin dikunjungi");
-        System.out.println("Masukkan ID destinasi (pisahkan spasi, cth: 2 4 5)");
-        System.out.print("Tujuan: ");
-        String line = sc.nextLine().trim();
-        String[] tokens = line.split("\\s+");
-
-        List<Place> destinations = new ArrayList<>();
-        for (String t : tokens) {
-            if (t.isBlank()) continue;
-            try {
-                int id = Integer.parseInt(t);
-                if (id == startId) continue;
-                Place p = chosen.getPlaceById(id);
-                if (p != null) destinations.add(p);
-            } catch (NumberFormatException ignored) {}
-        }
-
-        // --- 5. PROSES ROUTING (Dijkstra) ---
-        if (destinations.isEmpty()) {
-            System.out.println("Tidak ada destinasi valid dipilih atau Anda membatalkan. Program selesai.");
-            return;
-        }
-
-        double[][] matrix = chosen.getDistancesBetweenPlaces();
-        Graph graph = new Graph(matrix);
-        List<Place> route = new ArrayList<>();
-        double totalDistance = 0;
-        Place currentPlace = startPlace;
-
-        System.out.println("\n[Langkah 5] Rute Perjalanan Terbaik (Dijkstra Analysis)");
-        System.out.println("-------------------------------------------------------");
-
-        while (!destinations.isEmpty()) {
-            Place nearest = null;
-            double minDist = Double.MAX_VALUE;
-            int currentIndex = chosen.getPlaces().indexOf(currentPlace);
-
-            Graph.DijkstraResult result = graph.dijkstra(currentIndex);
-
-            for (Place candidate : destinations) {
-                int candidateIndex = chosen.getPlaces().indexOf(candidate);
-                double dist = result.dist[candidateIndex];
-
-                if (dist < minDist) {
-                    minDist = dist;
-                    nearest = candidate;
-                }
-            }
-
-            if (nearest != null) {
-                int nearestIndex = chosen.getPlaces().indexOf(nearest);
-                String pathStr = result.reconstructPath(nearestIndex);
-
-                route.add(nearest);
-                totalDistance += minDist;
-                destinations.remove(nearest);
-
-                System.out.printf(" -> Menuju %-25s (Jarak: %.1f km | Via Node: %s)\n",
-                        nearest.getName(), minDist, pathStr);
-
-                currentPlace = nearest;
-            }
-        }
-
-        // --- 6. REKAP RUTE ---
-        System.out.println("\n=================================");
-        System.out.println("       REKAP PERJALANAN");
-        System.out.println("=================================");
-        System.out.println("START : " + startPlace.getName());
-        for (Place p : route) {
-            System.out.println("  ↓   ");
-            System.out.println("TIBA  : " + p.getName());
-        }
-        System.out.println("---------------------------------");
-        System.out.printf("Total Jarak Tempuh: %.1f km\n", totalDistance);
     }
 
     private static void showPlaces(List<Place> places) {
