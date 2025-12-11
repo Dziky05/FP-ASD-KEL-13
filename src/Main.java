@@ -12,7 +12,7 @@ public class Main {
         System.out.println("==============================================");
 
         // --- 1. PILIH KOTA ---
-        System.out.println("\n[Langkah 1] Pilih Anda:");
+        System.out.println("\n[Langkah 1] Pilih Lokasi Anda:");
         System.out.println("1. Surabaya");
         System.out.println("2. Jakarta");
         System.out.println("3. Bandung");
