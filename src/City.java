@@ -27,8 +27,8 @@ public class City {
             for (int j = 0; j < n; j++) {
                 if (i == j) distancesBetweenPlaces[i][j] = 0;
                 else {
-                    double d1 = places.get(i).getDistanceFromHotel();
-                    double d2 = places.get(j).getDistanceFromHotel();
+                    double d1 = places.get(i).getDistance();
+                    double d2 = places.get(j).getDistance();
                     distancesBetweenPlaces[i][j] = Math.abs(d1 - d2) + 1.0; // simple heuristic
                 }
             }

@@ -3,24 +3,24 @@ import java.util.*;
 public class Place {
     private int id;
     private String name;
-    private double distanceFromHotel; // km
+    private double distance; // km
     private double price; // rupiah or representative cost
 
-    public Place(int id, String name, double distanceFromHotel, double price) {
+    public Place(int id, String name, double distance, double price) {
         this.id = id;
         this.name = name;
-        this.distanceFromHotel = distanceFromHotel;
+        this.distance = distance;
         this.price = price;
     }
 
     public int getId() { return id; }
     public String getName() { return name; }
-    public double getDistanceFromHotel() { return distanceFromHotel; }
+    public double getDistance() { return distance; }
     public double getPrice() { return price; }
 
     @Override
     public String toString() {
-        return String.format("%d. %s (jarak: %.1f km, harga: Rp%.0f)", id, name, distanceFromHotel, price);
+        return String.format("%d. %s (jarak: %.1f km, harga: Rp%.0f)", id, name, distance, price);
     }
 
     @Override

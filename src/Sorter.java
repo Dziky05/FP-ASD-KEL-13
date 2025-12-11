@@ -17,10 +17,10 @@ public class Sorter {
         }
 
         private static int partition(List<Place> arr, int low, int high) {
-            double pivot = arr.get(high).getDistanceFromHotel();
+            double pivot = arr.get(high).getDistance();
             int i = low - 1;
             for (int j = low; j < high; j++) {
-                if (arr.get(j).getDistanceFromHotel() <= pivot) {
+                if (arr.get(j).getDistance() <= pivot) {
                     i++;
                     Place tmp = arr.get(i); arr.set(i, arr.get(j)); arr.set(j, tmp);
                 }
