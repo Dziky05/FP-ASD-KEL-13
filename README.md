@@ -146,46 +146,73 @@ Wisatawan sering mengalami kesulitan dalam menentukan urutan kunjungan tempat wi
 ---
 ## Daftar Proyek Akhir Kelompok Lain
 
-Berikut adalah beberapa tautan repositori proyek akhir dari kelompok lain beserta judul proyeknya:
+Berikut adalah beberapa proyek akhir dari kelompok lain beserta judul dan tautan repositorinya:
 
-* **D 1 — Judul Proyek: *Word Rank Guesser Game***
-  Repo: https://github.com/NashiwaInsan/asdfinalproject
+### Kelompok D1
 
-* **D 2 — Judul Proyek: *Sistem Rekomendasi Event Berbasis Graph***
-  Repo: https://github.com/dedyirama-id/kael-recommendation-system
+**Judul Proyek**: Word Rank Guesser Game
+**Repository**: [https://github.com/NashiwaInsan/asdfinalproject](https://github.com/NashiwaInsan/asdfinalproject)
 
-* **D 3 — Judul Proyek: *Smart Traffic Light Simulator***
-  Repo: https://github.com/Sudukk/FP_ASD_Traffic_Light_Simulation_FINAL
+### Kelompok D2
 
-* **D 4 — Judul Proyek: *HotelSeek - Rekomendasi Pemilihan Hotel***
-  Repo: https://github.com/dreadf/hotelseek
-  
-* **D 5 — Judul Proyek: * xx ***
-  Repo: https://github.com/
+**Judul Proyek**: Sistem Rekomendasi Event Berbasis Graph
+**Repository**: [https://github.com/dedyirama-id/kael-recommendation-system](https://github.com/dedyirama-id/kael-recommendation-system)
 
-* **D 6 — Judul Proyek: *To-Do List***
-  Repo: https://github.com/anggraitapr/ASDFPTODOLIST
+### Kelompok D3
 
-* **D 7 — Judul Proyek: * xx ***
-  Repo: https://github.com/
+**Judul Proyek**: Smart Traffic Light Simulator
+**Repository**: [https://github.com/Sudukk/FP_ASD_Traffic_Light_Simulation_FINAL](https://github.com/Sudukk/FP_ASD_Traffic_Light_Simulation_FINAL)
 
-* **D 8 — Judul Proyek: * xx ***
-  Repo: https://github.com/
+### Kelompok D4
 
-* **D 9 — Judul Proyek: *Sistem Rekomendasi Teman Berdasarkan Mutual Friends***
-  Repo: https://github.com/mariaelvina/FinalProjectD9
+**Judul Proyek**: HotelSeek - Rekomendasi Pemilihan Hotel
+**Repository**: [https://github.com/dreadf/hotelseek](https://github.com/dreadf/hotelseek)
 
-* **D 10 — Judul Proyek: *Monster Chase***
-  Repo: https://github.com/Aida41104/FPASD
+### Kelompok D5
 
-* **D 11 — Judul Proyek: *Warehouse Management System***
-  Repo: https://github.com/FasaBil/ASD-D11-Inventory-Management
+**Judul Proyek**: *(belum tersedia)*
+**Repository**: [https://github.com/](https://github.com/)
 
-* **D 13 — Judul Proyek: *Sistem Manajemen Inventaris Gudang dan Optimasi Rute Pengiriman***
-  Repo: https://github.com/FashaAsshofa/Final-Project-ASD-D-Kelompok-13
+### Kelompok D6
 
-* **D 14 — Judul Proyek: *Rekomendasi Film berbasis Graph***
-  Repo: https://github.com/neutralcheeze/final-project-asd.git
+**Judul Proyek**: To-Do List
+**Repository**: [https://github.com/anggraitapr/ASDFPTODOLIST](https://github.com/anggraitapr/ASDFPTODOLIST)
+
+### Kelompok D7
+
+**Judul Proyek**: *(belum tersedia)*
+**Repository**: [https://github.com/](https://github.com/)
+
+### Kelompok D8
+
+**Judul Proyek**: *(belum tersedia)*
+**Repository**: [https://github.com/](https://github.com/)
+
+### Kelompok D9
+
+**Judul Proyek**: Sistem Rekomendasi Teman Berdasarkan Mutual Friends
+**Repository**: [https://github.com/mariaelvina/FinalProjectD9](https://github.com/mariaelvina/FinalProjectD9)
+
+### Kelompok D10
+
+**Judul Proyek**: Monster Chase
+**Repository**: [https://github.com/Aida41104/FPASD](https://github.com/Aida41104/FPASD)
+
+### Kelompok D11
+
+**Judul Proyek**: Warehouse Management System
+**Repository**: [https://github.com/FasaBil/ASD-D11-Inventory-Management](https://github.com/FasaBil/ASD-D11-Inventory-Management)
+
+### Kelompok D13
+
+**Judul Proyek**: Sistem Manajemen Inventaris Gudang dan Optimasi Rute Pengiriman
+**Repository**: [https://github.com/FashaAsshofa/Final-Project-ASD-D-Kelompok-13](https://github.com/FashaAsshofa/Final-Project-ASD-D-Kelompok-13)
+
+### Kelompok D14
+
+**Judul Proyek**: Rekomendasi Film berbasis Graph
+**Repository**: [https://github.com/neutralcheeze/final-project-asd.git](https://github.com/neutralcheeze/final-project-asd.git)
+
 ---
 
 ## Referensi
