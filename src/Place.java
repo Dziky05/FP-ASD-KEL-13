@@ -20,7 +20,12 @@ public class Place {
 
     @Override
     public String toString() {
-        return String.format("%d. %s (jarak: %.1f km, harga: Rp%.0f)", id, name, distance, price);
+        return String.format(
+                "%-30s | %8.1f km | Rp %8.0f",
+                name,
+                distance,
+                price
+        );
     }
 
     @Override

@@ -143,8 +143,13 @@ public class Main {
                         totalDistance += minDist;
                         remainingDestinations.remove(nearest);
 
-                        System.out.printf(" -> Menuju %-25s (Jarak: %.1f km | Via Node: %s)\n",
-                                nearest.getName(), minDist, pathStr);
+                        System.out.printf(
+                                "→ %-30s | %6.1f km | Path: %s\n",
+                                nearest.getName(),
+                                minDist,
+                                pathStr
+                        );
+
 
                         currentPlace = nearest;
                     }
@@ -204,10 +209,17 @@ public class Main {
     }
 
     private static void showPlaces(List<Place> places) {
+        System.out.println("--------------------------------------------------------------");
+        System.out.printf("%-30s | %-10s | %-10s\n", "Nama Tempat", "Jarak", "Harga");
+        System.out.println("--------------------------------------------------------------");
+
         for (Place p : places) {
             System.out.println(p);
         }
+
+        System.out.println("--------------------------------------------------------------");
     }
+
 
     private static void initSampleData() {
         // Surabaya
