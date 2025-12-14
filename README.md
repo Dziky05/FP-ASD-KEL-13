@@ -141,7 +141,21 @@ Wisatawan sering mengalami kesulitan dalam menentukan urutan kunjungan tempat wi
 
 | Tanggal          | Deskripsi Update                                                                                                                                                                                                                                            | File Terkait          | 
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | 
-| 13 Desember 2025 | Perapihan output program: penambahan spasi antar kategori, perataan kolom output agar sejajar, serta penghapusan tampilan ID tempat pada output pengguna. Perubahan dilakukan untuk meningkatkan keterbacaan dan kerapihan tampilan sesuai feedback revisi. | Main.java, Place.java | 
+| 14 Desember 2025 | Perapihan output program: penambahan spasi antar kategori, perataan kolom output agar sejajar, serta penghapusan tampilan ID tempat pada output pengguna. Perubahan dilakukan untuk meningkatkan keterbacaan dan kerapihan tampilan sesuai feedback revisi. | Main.java, Place.java | 
+
+---
+## Daftar Proyek Akhir Kelompok Lain
+
+Berikut adalah beberapa tautan repositori proyek akhir dari kelompok lain beserta judul proyeknya:
+
+* **Kelompok 1 — Judul Proyek: *Word Rank Guesser Game***
+  Repo: https://github.com/NashiwaInsan/asdfinalproject
+
+* **Kelompok 2 — Judul Proyek: *Sistem Rekomendasi Event Berbasis Graph***
+  Repo: https://github.com/dedyirama-id/kael-recommendation-system
+
+* **Kelompok 3 — Judul Proyek: *Smart Traffic Light Simulator***
+  Repo: https://github.com/Sudukk/FP_ASD_Traffic_Light_Simulation_FINAL
 
 ---
 
