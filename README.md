@@ -144,6 +144,9 @@ Wisatawan sering mengalami kesulitan dalam menentukan urutan kunjungan tempat wi
 | 14 Desember 2025 | Perapihan output program: penambahan spasi antar kategori, perataan kolom output agar sejajar, serta penghapusan tampilan ID tempat pada output pengguna. Perubahan dilakukan untuk meningkatkan keterbacaan dan kerapihan tampilan sesuai feedback revisi. | Main.java, Place.java | 
 
 ---
+## Daftar Proyek Akhir Kelompok Lain 
+Berikut adalah beberapa proyek akhir dari kelompok lain beserta judul dan tautan repositorinya:
+
 | Kelompok | Judul Proyek                                                    | Repository                                                                                                                         |
 | -------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | D1       | Word Rank Guesser Game                                          | [https://github.com/NashiwaInsan/asdfinalproject](https://github.com/NashiwaInsan/asdfinalproject)                                 |
