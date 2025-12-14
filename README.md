@@ -148,15 +148,44 @@ Wisatawan sering mengalami kesulitan dalam menentukan urutan kunjungan tempat wi
 
 Berikut adalah beberapa tautan repositori proyek akhir dari kelompok lain beserta judul proyeknya:
 
-* **Kelompok 1 — Judul Proyek: *Word Rank Guesser Game***
+* **D 1 — Judul Proyek: *Word Rank Guesser Game***
   Repo: https://github.com/NashiwaInsan/asdfinalproject
 
-* **Kelompok 2 — Judul Proyek: *Sistem Rekomendasi Event Berbasis Graph***
+* **D 2 — Judul Proyek: *Sistem Rekomendasi Event Berbasis Graph***
   Repo: https://github.com/dedyirama-id/kael-recommendation-system
 
-* **Kelompok 3 — Judul Proyek: *Smart Traffic Light Simulator***
+* **D 3 — Judul Proyek: *Smart Traffic Light Simulator***
   Repo: https://github.com/Sudukk/FP_ASD_Traffic_Light_Simulation_FINAL
 
+* **D 4 — Judul Proyek: *HotelSeek - Rekomendasi Pemilihan Hotel***
+  Repo: https://github.com/dreadf/hotelseek
+  
+* **D 5 — Judul Proyek: * xx ***
+  Repo: https://github.com/
+
+* **D 6 — Judul Proyek: *To-Do List***
+  Repo: https://github.com/anggraitapr/ASDFPTODOLIST
+
+* **D 7 — Judul Proyek: * xx ***
+  Repo: https://github.com/
+
+* **D 8 — Judul Proyek: * xx ***
+  Repo: https://github.com/
+
+* **D 9 — Judul Proyek: *Sistem Rekomendasi Teman Berdasarkan Mutual Friends***
+  Repo: https://github.com/mariaelvina/FinalProjectD9
+
+* **D 10 — Judul Proyek: *Monster Chase***
+  Repo: https://github.com/Aida41104/FPASD
+
+* **D 11 — Judul Proyek: *Warehouse Management System***
+  Repo: https://github.com/FasaBil/ASD-D11-Inventory-Management
+
+* **D 13 — Judul Proyek: *Sistem Manajemen Inventaris Gudang dan Optimasi Rute Pengiriman***
+  Repo: https://github.com/FashaAsshofa/Final-Project-ASD-D-Kelompok-13
+
+* **D 14 — Judul Proyek: *Rekomendasi Film berbasis Graph***
+  Repo: https://github.com/neutralcheeze/final-project-asd.git
 ---
 
 ## Referensi
