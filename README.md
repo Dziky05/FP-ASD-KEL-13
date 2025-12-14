@@ -139,9 +139,9 @@ Wisatawan sering mengalami kesulitan dalam menentukan urutan kunjungan tempat wi
 
 ## Update Program
 
-| Tanggal          | Deskripsi Update                                                                                                                                                                                                                                            | File Terkait          | Bukti (Link Video)              |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| 13 Desember 2025 | Perapihan output program: penambahan spasi antar kategori, perataan kolom output agar sejajar, serta penghapusan tampilan ID tempat pada output pengguna. Perubahan dilakukan untuk meningkatkan keterbacaan dan kerapihan tampilan sesuai feedback revisi. | Main.java, Place.java | (opsional: isi link video demo) |
+| Tanggal          | Deskripsi Update                                                                                                                                                                                                                                            | File Terkait          | 
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | 
+| 13 Desember 2025 | Perapihan output program: penambahan spasi antar kategori, perataan kolom output agar sejajar, serta penghapusan tampilan ID tempat pada output pengguna. Perubahan dilakukan untuk meningkatkan keterbacaan dan kerapihan tampilan sesuai feedback revisi. | Main.java, Place.java | 
 
 ---
 
