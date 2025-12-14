@@ -144,74 +144,21 @@ Wisatawan sering mengalami kesulitan dalam menentukan urutan kunjungan tempat wi
 | 14 Desember 2025 | Perapihan output program: penambahan spasi antar kategori, perataan kolom output agar sejajar, serta penghapusan tampilan ID tempat pada output pengguna. Perubahan dilakukan untuk meningkatkan keterbacaan dan kerapihan tampilan sesuai feedback revisi. | Main.java, Place.java | 
 
 ---
-## Daftar Proyek Akhir Kelompok Lain
-
-Berikut adalah beberapa proyek akhir dari kelompok lain beserta judul dan tautan repositorinya:
-
-### Kelompok D1
-
-**Judul Proyek**: Word Rank Guesser Game
-**Repository**: [https://github.com/NashiwaInsan/asdfinalproject](https://github.com/NashiwaInsan/asdfinalproject)
-
-### Kelompok D2
-
-**Judul Proyek**: Sistem Rekomendasi Event Berbasis Graph
-**Repository**: [https://github.com/dedyirama-id/kael-recommendation-system](https://github.com/dedyirama-id/kael-recommendation-system)
-
-### Kelompok D3
-
-**Judul Proyek**: Smart Traffic Light Simulator
-**Repository**: [https://github.com/Sudukk/FP_ASD_Traffic_Light_Simulation_FINAL](https://github.com/Sudukk/FP_ASD_Traffic_Light_Simulation_FINAL)
-
-### Kelompok D4
-
-**Judul Proyek**: HotelSeek - Rekomendasi Pemilihan Hotel
-**Repository**: [https://github.com/dreadf/hotelseek](https://github.com/dreadf/hotelseek)
-
-### Kelompok D5
-
-**Judul Proyek**: *(belum tersedia)*
-**Repository**: [https://github.com/](https://github.com/)
-
-### Kelompok D6
-
-**Judul Proyek**: To-Do List
-**Repository**: [https://github.com/anggraitapr/ASDFPTODOLIST](https://github.com/anggraitapr/ASDFPTODOLIST)
-
-### Kelompok D7
-
-**Judul Proyek**: *(belum tersedia)*
-**Repository**: [https://github.com/](https://github.com/)
-
-### Kelompok D8
-
-**Judul Proyek**: *(belum tersedia)*
-**Repository**: [https://github.com/](https://github.com/)
-
-### Kelompok D9
-
-**Judul Proyek**: Sistem Rekomendasi Teman Berdasarkan Mutual Friends
-**Repository**: [https://github.com/mariaelvina/FinalProjectD9](https://github.com/mariaelvina/FinalProjectD9)
-
-### Kelompok D10
-
-**Judul Proyek**: Monster Chase
-**Repository**: [https://github.com/Aida41104/FPASD](https://github.com/Aida41104/FPASD)
-
-### Kelompok D11
-
-**Judul Proyek**: Warehouse Management System
-**Repository**: [https://github.com/FasaBil/ASD-D11-Inventory-Management](https://github.com/FasaBil/ASD-D11-Inventory-Management)
-
-### Kelompok D13
-
-**Judul Proyek**: Sistem Manajemen Inventaris Gudang dan Optimasi Rute Pengiriman
-**Repository**: [https://github.com/FashaAsshofa/Final-Project-ASD-D-Kelompok-13](https://github.com/FashaAsshofa/Final-Project-ASD-D-Kelompok-13)
-
-### Kelompok D14
-
-**Judul Proyek**: Rekomendasi Film berbasis Graph
-**Repository**: [https://github.com/neutralcheeze/final-project-asd.git](https://github.com/neutralcheeze/final-project-asd.git)
+| Kelompok | Judul Proyek                                                    | Repository                                                                                                                         |
+| -------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| D1       | Word Rank Guesser Game                                          | [https://github.com/NashiwaInsan/asdfinalproject](https://github.com/NashiwaInsan/asdfinalproject)                                 |
+| D2       | Sistem Rekomendasi Event Berbasis Graph                         | [https://github.com/dedyirama-id/kael-recommendation-system](https://github.com/dedyirama-id/kael-recommendation-system)           |
+| D3       | Smart Traffic Light Simulator                                   | [https://github.com/Sudukk/FP_ASD_Traffic_Light_Simulation_FINAL](https://github.com/Sudukk/FP_ASD_Traffic_Light_Simulation_FINAL) |
+| D4       | HotelSeek – Rekomendasi Pemilihan Hotel                         | [https://github.com/dreadf/hotelseek](https://github.com/dreadf/hotelseek)                                                         |
+| D5       | *(Belum tersedia)*                                              | [https://github.com/](https://github.com/)                                                                                         |
+| D6       | To-Do List                                                      | [https://github.com/anggraitapr/ASDFPTODOLIST](https://github.com/anggraitapr/ASDFPTODOLIST)                                       |
+| D7       | Sistem Antrian IGD                                              | [https://github.com/](https://github.com/WilliamHanantha/FP-ASD)                                                                                         |
+| D8       | Sistem Rekomendasi Jadwal Latihan dan Nutrisi Gym               | [https://github.com/](https://github.com/tyr3x74/GymPlan)                                                                                         |
+| D9       | Sistem Rekomendasi Teman Berdasarkan Mutual Friends             | [https://github.com/mariaelvina/FinalProjectD9](https://github.com/mariaelvina/FinalProjectD9)                                     |
+| D10      | Monster Chase                                                   | [https://github.com/Aida41104/FPASD](https://github.com/Aida41104/FPASD)                                                           |
+| D11      | Warehouse Management System                                     | [https://github.com/FasaBil/ASD-D11-Inventory-Management](https://github.com/FasaBil/ASD-D11-Inventory-Management)                 |
+| D13      | Sistem Manajemen Inventaris Gudang dan Optimasi Rute Pengiriman | [https://github.com/FashaAsshofa/Final-Project-ASD-D-Kelompok-13](https://github.com/FashaAsshofa/Final-Project-ASD-D-Kelompok-13) |
+| D14      | Rekomendasi Film berbasis Graph                                 | [https://github.com/neutralcheeze/final-project-asd.git](https://github.com/neutralcheeze/final-project-asd.git)                   |
 
 ---
 
